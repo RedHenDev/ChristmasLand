@@ -60,8 +60,8 @@ let pos; // Position vector in Perlin terrain.
 let prevX = 0;
 let prevY = 0;
 
-let rows = 24;
-let cols = 24;
+let rows = 28;
+let cols = 28;
 
 // For calculating position relative
 // to cols and rows.
@@ -262,30 +262,26 @@ function genTerrain(){
     push();
       
     // Apply our Perlin noise.
-    let p_freq = bs*333;
-    let p_amp = 99;  
+    let p_freq = 132*bs;
+    let p_amp = 5*bs;  
     let y = noise((adjust+x*bs-
                    pos.x)/p_freq,
                   (adjust+z*bs-
                    pos.z)/p_freq)*p_amp;  
-      p_freq = bs*34;
-    p_amp = 33;
-    y += noise((adjust+x*bs-
-                pos.x)/p_freq,
-                  (adjust+z*bs-
-                   pos.z)/p_freq)*p_amp;
-    p_freq = bs*2;
+//      p_freq = 12*bs;
+//    p_amp = 5;
+//    y += noise((adjust+x*bs-
+//                pos.x)/p_freq,
+//                  (adjust+z*bs-
+//                   pos.z)/p_freq)*p_amp;
+    p_freq = 2*bs;
     p_amp = 2;
     y += noise((adjust+x*bs-
                 pos.x)/p_freq,
                   (adjust+z*bs-
                    pos.z)/p_freq)*p_amp;
-    
-    // let y = noise((adjust+x*bs-pos.x)/freq,
-    //               (adjust+z*bs-
-    //                pos.z)/freq)*amp;
       
-    if (gameMode==='map')
+    //if (gameMode==='map')
       y = Math.floor(y);
       
     // Lines on terrain.
@@ -408,7 +404,7 @@ function genTerrain(){
       if (howNorth>64){
         // Northerly ice.
         //ambientLight(222);
-        ambientMaterial(200);
+        ambientMaterial(200,200,200);
         stroke(222);
         //shininess(4);
         //texture(grass);
@@ -540,3 +536,25 @@ function genTerrain(){
   pop();
   
 }
+
+/*
+ // Apply our Perlin noise.
+    let p_freq = bs*333;
+    let p_amp = 99;  
+    let y = noise((adjust+x*bs-
+                   pos.x)/p_freq,
+                  (adjust+z*bs-
+                   pos.z)/p_freq)*p_amp;  
+      p_freq = bs*34;
+    p_amp = 33;
+    y += noise((adjust+x*bs-
+                pos.x)/p_freq,
+                  (adjust+z*bs-
+                   pos.z)/p_freq)*p_amp;
+    p_freq = bs*2;
+    p_amp = 2;
+    y += noise((adjust+x*bs-
+                pos.x)/p_freq,
+                  (adjust+z*bs-
+                   pos.z)/p_freq)*p_amp;
+*/

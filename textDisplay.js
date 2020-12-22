@@ -140,9 +140,9 @@ function displayMessage(mess){
   //gmess.rectMode(CENTER);
   gmess.background(0,255,0,100);
   gmess.textSize(height/32);
-  gmess.fill(255,0,0);
-  gmess.stroke(0);
-  gmess.strokeWeight(3);
+  gmess.fill(255);
+  gmess.stroke(200,0,0);
+  gmess.strokeWeight(4);
   gmess.text(mess,42,64);
   translate(0,0,-700);
   noStroke();

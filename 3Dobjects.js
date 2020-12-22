@@ -99,8 +99,9 @@ function tree(rot){
       // Crown.
       translate(0,-bh,0);
       rotateY(rot);
+			// This is the line causing the error
+			// message. Use of alpha seems fine?
       ambientMaterial(0,88,0,200);
-      //shininess(0);
       noStroke();
       sphere(Math.abs
              (Math.sin(rot))*42+22,5);
@@ -177,6 +178,7 @@ function putStag(){
   noStroke();
   // Base rotation on player's 
   // direction vector.
+	// Lerped in locomotion().
   rotateY(stagRot);
   if (gameMode==='map'){
     emissiveMaterial(0,255,100);
