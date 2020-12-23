@@ -148,7 +148,7 @@ function setup() {
   
   // Generate and display our terrain!
   //genTerrain();
-  displayMessage('Merry Christmas and welcome to\nAmelie\'s Magical Christmas Land!\n\nIf you\'re lucky you may see snow, and\nmysterious crystals.\n\nTap top left to begin.\n\nTo fly Rudolf forwards, tap or click;\n tap again to stop flying.\n\nSwipe left and right, or move mouse, to turn.\n\n(You can use keys if using keyboard.)\n\nCan you help Rudolf find Father Christmas?');
+  displayMessage('Merry Christmas and welcome to\nAmelie\'s Magical Christmas Land!\n\nIf you\'re lucky you may see snow, and\nmysterious crystals.\n\nTap top left to begin.\n\nTo fly Rudolph forwards, tap or click;\n tap again to stop flying.\n\nSwipe left and right, or move mouse, to turn.\n\n(You can use keys if using keyboard.)\n\nCan you help Rudolph find Father Christmas?');
 }
 
 

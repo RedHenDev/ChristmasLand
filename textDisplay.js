@@ -17,7 +17,7 @@ function gotMail(){
   // It's OK now for mail sound to chime.
   mailSoundDone = false;
   if (!newMessage)
-    displayMessage('No new messages for Rudolf.\n\nIf you\'re lucky you may see snow, and\nmysterious crystals.\n\nTo fly Rudolf forwards, tap or click;\n tap again to stop flying.\n\nSwipe left and right, or move mouse, to turn.\n\n(You can use keys if using keyboard.)\n\nCan you help Rudolf find Father Christmas?');
+    displayMessage('No new messages for Rudolph.\n\nIf you\'re lucky you may see snow, and\nmysterious crystals.\n\nTo fly Rudolph forwards, tap or click;\n tap again to stop flying.\n\nSwipe left and right, or move mouse, to turn.\n\n(You can use keys if using keyboard.)\n\nCan you help Rudolph find Father Christmas?');
   else displayMessage(whatMessage);
 }
 
