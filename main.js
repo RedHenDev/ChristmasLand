@@ -60,8 +60,8 @@ let pos; // Position vector in Perlin terrain.
 let prevX = 0;
 let prevY = 0;
 
-let rows = 28;
-let cols = 28;
+let rows = 24;
+let cols = 24;
 
 // For calculating position relative
 // to cols and rows.
@@ -261,27 +261,27 @@ function genTerrain(){
     for (let x = 0-os/2; x < cols+os/2; x++){
     push();
       
-    // Apply our Perlin noise.
-    let p_freq = 132*bs;
-    let p_amp = 5*bs;  
+    /// Apply our Perlin noise.
+    let p_freq = bs*333;
+    let p_amp = 99;  
     let y = noise((adjust+x*bs-
                    pos.x)/p_freq,
                   (adjust+z*bs-
                    pos.z)/p_freq)*p_amp;  
-//      p_freq = 12*bs;
-//    p_amp = 5;
-//    y += noise((adjust+x*bs-
-//                pos.x)/p_freq,
-//                  (adjust+z*bs-
-//                   pos.z)/p_freq)*p_amp;
-    p_freq = 2*bs;
+      p_freq = bs*34;
+    p_amp = 33;
+    y += noise((adjust+x*bs-
+                pos.x)/p_freq,
+                  (adjust+z*bs-
+                   pos.z)/p_freq)*p_amp;
+    p_freq = bs*2;
     p_amp = 2;
     y += noise((adjust+x*bs-
                 pos.x)/p_freq,
                   (adjust+z*bs-
                    pos.z)/p_freq)*p_amp;
       
-    //if (gameMode==='map')
+    if (gameMode==='map')
       y = Math.floor(y);
       
     // Lines on terrain.
