@@ -5,6 +5,7 @@ function mousePressed(){
   
   // On mousePress() or touch,
   // permit sounds.
+  getAudioContext();
   if (!getAudioContext()){
     getAudioContext();
   }
